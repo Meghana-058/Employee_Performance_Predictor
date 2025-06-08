@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Performance Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Performance Predictor</h1>
+        <form method="POST">
+            <label for="engagement">Work Engagement Score (0-5):</label>
+            <input type="number" step="0.5" min="0" max="5" name="engagement" required>
+
+            <label for="satisfaction">Work Satisfaction Score (0-5):</label>
+            <input type="number" step="0.5" min="0" max="5" name="satisfaction" required>
+
+            <label for="training_cost">Training Cost (in $):</label>
+            <input type="number" step="10" min="0" name="training_cost" required>
+
+            <label for="work_life">Work-Life Balance Score (0-5):</label>
+            <input type="number" step="0.5" min="0" max="5" name="work_life" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result">
+                <p><strong>Prediction:</strong> {{ prediction }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
