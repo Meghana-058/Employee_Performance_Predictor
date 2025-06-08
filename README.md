@@ -1,4 +1,4 @@
-🧠 HR Performance Predictor
+🧠 Employee Performance Predictor
 
 A Flask-based machine learning web application that predicts whether an employee fully meets performance expectations based on engagement, satisfaction, training cost, and work-life balance.
 
